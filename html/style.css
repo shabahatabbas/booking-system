@@ -1,0 +1,116 @@
+/* Grundläggande styling för sidlayout */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 25px;
+}
+/* Styling för headern */
+.header {
+    width: 100%;
+    background-color: #285e53;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+/* Gemensam styling för månads- och veckokalender */
+.container {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    margin-top: 60px;
+    box-sizing: border-box;
+}
+/* Styling för månadskalendern */
+.monthly-calendar {
+    width: 200px;
+    margin-right: 20px;
+    background-color: #f3f4f6;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.monthly-calendar h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+.monthly-calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+.monthly-calendar th, .monthly-calendar td {
+    padding: 5px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+.monthly-calendar th {
+    background-color: #285e53;
+    color: #fff;
+}
+/* Navigeringsknappar */
+.calendar-navigation, .week-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.calendar-navigation a,
+.week-navigation a {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-navigation a:hover,
+.week-navigation a:hover {
+    background-color: #e0e0e0;
+}
+/* Specifik styling för veckotexten i .week-navigation */
+.week-navigation span {
+    font-size: 2em; /* Behåll större fontstorlek för veckan */
+    color: #333;
+}
+/* Styling för veckokalendern */
+.weekly-calendar {
+    flex-grow: 1;
+}
+.weekly-calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #285e53;
+    color: #fff;
+}
+.hour {
+    width: 50px;
+    background-color: #e6efec;
+}
+.event {
+    background-color: #add8e6;
+    color: #333;
+}
+.highlight-week {
+    background-color: #870b1c; /* Justera färgen efter behov */
+    font-weight: bold;
+}
