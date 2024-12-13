@@ -1,3 +1,12 @@
+<?php
+session_start();
+// Check if user_id is set in session
+if (isset($_SESSION['user_id'])) {
+    // If not, redirect to login page
+    header("Location: index.php");
+    exit(); // Ensure that the script stops executing after the redirect
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +17,7 @@
     <script src="assets/js/jquery.js"></script>
     <style>
         body {
-            background: linear-gradient(to right, #6a11cb, #2575fc);
+            background-color: #285E53;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -23,14 +32,14 @@
             max-width: 400px;
         }
         .nav-tabs .nav-link.active {
-            background-color: #2575fc;
+            background-color: #285E53;
             color: #fff;
         }
         .nav-tabs .nav-link {
-            color: #2575fc;
+            color: #285E53;
         }
         button.btn-primary {
-            background-color: #2575fc;
+            background-color: #285E53;
             border: none;
         }
         button.btn-primary:hover {

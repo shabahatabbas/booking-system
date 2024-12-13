@@ -2,6 +2,7 @@
 session_start();
 require_once 'config.php';
 
+
 $email = $_POST['email'];
 $password = $_POST['password'];
 
@@ -19,7 +20,7 @@ if ($result->num_rows === 1) {
         $_SESSION['username'] = $user['username'];
         $_SESSION['role'] = $user['role'];
 
-        echo json_encode(['success' => true, 'redirect' => 'dashboard.php']);
+        echo json_encode(['success' => true, 'redirect' => 'index.php']);
     } else {
         echo json_encode(['success' => false, 'message' => 'Invalid password.']);
     }
